@@ -25,8 +25,8 @@ const Navigation = () => {
     ];
 
     return (
-        <RestictWidth>
-            <nav className='text-slate-700 py-5 px-10 dark:bg-stone-700 dark:text-white rounded-xl'>
+        <RestictWidth className='fixed w-full top-0 mx-auto'>
+            <nav className='text-slate-700 backdrop-blur-sm py-5 px-10 dark:bg-stone-700 dark:text-white rounded-xl'>
                 <div className='flex justify-center sm:justify-between mx-auto items-center sm:space-x-10'>
                     <div className='text-xl font-bold hidden sm:block'>
                         <Link href='/'>xarielah.dev</Link>

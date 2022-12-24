@@ -9,7 +9,7 @@ interface MainLayoutProps {
 
 const MainLayout = ({ children }: MainLayoutProps) => {
     return (
-        <div className='mx-auto py-5'>
+        <div className='mx-auto'>
             <Head>
                 <title>xarielah.dev: Where magic happens</title>
                 <meta
@@ -39,10 +39,10 @@ const MainLayout = ({ children }: MainLayoutProps) => {
                 <meta property='og:site_name' content='xarielah.dev' />
                 <link rel='icon' href='/favicon.ico' />
             </Head>
-            <header>
+            <header className='flex justify-center'>
                 <Navigation />
             </header>
-            <main className='py-10'>{children}</main>
+            <main>{children}</main>
             <Footer />
         </div>
     );
