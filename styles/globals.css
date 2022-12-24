@@ -15,8 +15,16 @@ body {
   @apply p-4 rounded-full;
 }
 
+.info-container {
+  @apply flex flex-col text-center items-center space-y-8 my-5 text-2xl;
+}
+
 .feature-on-hover {
   display: none;
+}
+
+.info-title {
+  @apply text-4xl text-center font-bold mt-9 lg:mt-0;
 }
 
 .feature:hover > .feature-on-hover {
