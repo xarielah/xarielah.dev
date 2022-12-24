@@ -10,21 +10,21 @@ export type Route = {
 };
 
 const Navigation = () => {
-    const routes: Route[] = [
-        {
-            path: '/',
-            name: 'Home',
-        },
-        {
-            path: '/about',
-            name: 'About',
-        },
-        {
-            path: 'https://github.com/xarielah',
-            name: '@GitHub',
-            target: '_blank',
-        },
-    ];
+  const routes: Route[] = [
+    {
+      path: "/",
+      name: "Home",
+    },
+    {
+      path: "/about",
+      name: "About",
+    },
+    {
+      path: "https://github.com/xarielah",
+      name: "@GitHub",
+      target: "_blank",
+    },
+  ];
 
     return (
         <nav className='w-full fixed text-md'>
