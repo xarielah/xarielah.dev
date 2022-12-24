@@ -17,16 +17,6 @@ interface SocialLinksProps {
 const SocialLinks = ({ className }: SocialLinksProps) => {
   const socialLinks: Social[] = [
     {
-      name: "Ariel GitHub",
-      href: "https://github.com/xarielah",
-      icon: FaGithubAlt,
-    },
-    {
-      name: "Ariel Discord Link",
-      href: "#",
-      icon: RxDiscordLogo,
-    },
-    {
       name: "Ariel LinkedIn Profile",
       href: "https://www.linkedin.com/in/ariel-aharon-580899202/",
       icon: IoLogoLinkedin,
@@ -35,9 +25,12 @@ const SocialLinks = ({ className }: SocialLinksProps) => {
 
   return (
     <div
-      className={`flex flex-col items-center justify-center lg:mb-0 mb-24 ${className}`}
+      className={
+        `flex flex-col items-center justify-center lg:mb-0 mb-241` + className
+          ? className
+          : ""
+      }
     >
-      <h5 className="font-medium">Connect with me via:</h5>
       <div className="flex space-x-5">
         {socialLinks.map((link) => (
           <Link

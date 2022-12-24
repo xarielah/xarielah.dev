@@ -1,5 +1,4 @@
 import GeneralContainer from "../../layout/general-container";
-import SocialLinks from "./social-icons";
 
 const Information = () => {
   const getAge = (): number => {
@@ -23,7 +22,6 @@ const Information = () => {
         <div className="flex flex-col justify-center">
           <div className="info-container relative">
             <h2 className="info-title">Hi There, Nice Meeting You!</h2>
-            {/* <SocialLinks className="absolute -top-8 right-0" /> */}
             <p>
               My name is Ariel, I'm {getAge()}, born in Fabruary @ Northern of
               Israel.
