@@ -9,7 +9,7 @@ interface MainLayoutProps {
 
 const MainLayout = ({ children }: MainLayoutProps) => {
     return (
-        <div className='mx-auto'>
+        <>
             <Head>
                 <title>xarielah.dev: Where magic happens</title>
                 <meta
@@ -42,9 +42,9 @@ const MainLayout = ({ children }: MainLayoutProps) => {
             <header className='flex justify-center'>
                 <Navigation />
             </header>
-            <main>{children}</main>
+            <main className='pt-20 px-5'>{children}</main>
             <Footer />
-        </div>
+        </>
     );
 };
 

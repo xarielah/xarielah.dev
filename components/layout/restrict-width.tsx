@@ -6,7 +6,11 @@ interface RestictWidthProps {
 }
 
 const RestictWidth = ({ children, className }: RestictWidthProps) => {
-    return <section className={`max-w-[120ch] mx-auto ${className}`}>{children}</section>;
+    return (
+        <div className={`max-w-[120ch] ${className ? className : ''}`}>
+            {children}
+        </div>
+    );
 };
 
 export default RestictWidth;

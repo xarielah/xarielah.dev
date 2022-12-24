@@ -1,10 +1,12 @@
-import Link from "next/link";
-import RestictWidth from "../layout/restrict-width";
+import Link from 'next/link';
+import RestictWidth from '../layout/restrict-width';
+import SocialLinks from '../ui-elements/social-icons/social-icons';
+import ResponsiveMenu from './responsive-menu';
 
-type Route = {
-  path: string;
-  name: string;
-  target?: string;
+export type Route = {
+    path: string;
+    name: string;
+    target?: string;
 };
 
 const Navigation = () => {
@@ -24,29 +26,34 @@ const Navigation = () => {
     },
   ];
 
-  return (
-    <RestictWidth className="fixed w-full top-0 mx-auto z-[99]">
-      <nav className="text-slate-700 backdrop-blur-sm py-5 px-10 dark:bg-stone-700 dark:text-white rounded-xl">
-        <div className="flex justify-center sm:justify-between mx-auto items-center sm:space-x-10">
-          <div className="text-xl font-bold hidden sm:block">
-            <Link href="/">xarielah.dev</Link>
-          </div>
-          <ul className="flex justify-center font-medium">
-            {routes.map((route) => (
-              <li
-                key={route.name}
-                className="hover:text-slate-500 mx-2 ease-in-out duration-300 rounded-xl py-1 px-3"
-              >
-                <Link href={route.path} target={route.target}>
-                  {route.name}
+    return (
+        <nav className='w-full fixed text-md'>
+            <RestictWidth className='mx-auto flex items-center justify-between p-4 lg:max-w-[200ch] lg:text-xl'>
+                <Link href='/'>
+                    <div className='font-bold text-xl lg:text-3xl'>
+                        xarielah.dev
+                    </div>
                 </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </nav>
-    </RestictWidth>
-  );
+                <div className='flex items-center space-x-3 lg:space-x-10'>
+                    <div className='hidden sm:flex space-x-5 lg:space-x-10'>
+                        {routes.map((link) => (
+                            <Link
+                                href={link.path}
+                                target={link.target}
+                                key={link.name}
+                            >
+                                {link.name}
+                            </Link>
+                        ))}
+                    </div>
+                    <SocialLinks />
+                    <div className='block sm:hidden'>
+                        <ResponsiveMenu routes={routes} />
+                    </div>
+                </div>
+            </RestictWidth>
+        </nav>
+    );
 };
 
 export default Navigation;
