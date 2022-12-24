@@ -6,10 +6,8 @@ import Technologies from '../../components/pages/about/technologies';
 const About = () => {
     return (
         <section>
-            <RestictWidth>
-                <Information />
-            </RestictWidth>
-            <Technologies />
+            <Information />
+            {/* <Technologies /> */}
         </section>
     );
 };

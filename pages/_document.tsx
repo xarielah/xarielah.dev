@@ -2,7 +2,7 @@ import { Html, Head, Main, NextScript } from 'next/document';
 
 export default function Document() {
     return (
-        <Html lang='en'>
+        <Html lang='en' className='dark'>
             <Head>
                 <link rel='preconnect' href='https://fonts.googleapis.com' />
                 <link
@@ -13,6 +13,14 @@ export default function Document() {
                 <link
                     href='https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;400;500;700;900&display=swap'
                     rel='stylesheet'
+                />
+                <script
+                    src='https://unpkg.com/flowbite@1.5.5/dist/flowbite.js'
+                    defer
+                ></script>
+                <link
+                    rel='stylesheet'
+                    href='https://unpkg.com/flowbite@1.5.5/dist/flowbite.min.css'
                 />
             </Head>
             <body className='bg-stone-400 text-white'>

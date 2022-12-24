@@ -4,12 +4,11 @@
 
 body {
   font-family: "Roboto Slab", serif;
-  /* Change or remove if bugging UI */
-  @apply flex max-w-[100vh];
+  @apply dark:bg-gray-800;
 }
 
 .main-title {
-  @apply text-2xl md:text-4xl lg:text-5xl font-bold bg-stone-700/30 p-3;
+  @apply text-5xl md:text-6xl lg:text-7xl font-bold p-3;
   width: max-content;
 }
 

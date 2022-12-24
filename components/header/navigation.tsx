@@ -1,58 +1,59 @@
-import Link from "next/link";
-import RestictWidth from "../layout/restrict-width";
-import SocialLinks from "../ui-elements/social-icons/social-icons";
+import Link from 'next/link';
+import RestictWidth from '../layout/restrict-width';
+import SocialLinks from '../ui-elements/social-icons/social-icons';
+import ResponsiveMenu from './responsive-menu';
 
-type Route = {
-  path: string;
-  name: string;
-  target?: string;
+export type Route = {
+    path: string;
+    name: string;
+    target?: string;
 };
 
 const Navigation = () => {
-  const routes: Route[] = [
-    {
-      path: "/",
-      name: "Home",
-    },
-    {
-      path: "/about",
-      name: "About",
-    },
-    {
-      path: "https://github.com/xarielah",
-      name: "@GitHub",
-      target: "_blank",
-    },
-  ];
+    const routes: Route[] = [
+        {
+            path: '/',
+            name: 'Home',
+        },
+        {
+            path: '/about',
+            name: 'About',
+        },
+        {
+            path: 'https://github.com/xarielah',
+            name: '@GitHub',
+            target: '_blank',
+        },
+    ];
 
-  return (
-    <div className="flex justify-center">
-      <RestictWidth className="fixed w-full top-0">
-        <nav className="text-slate-700 backdrop-blur-sm p-4">
-          <div className="flex relative justify-between items-center sm:space-x-10">
-            <div className="text-xl font-bold hidden sm:block">
-              <Link href="/">xarielah.dev</Link>
-            </div>
-            <ul className="flex sm:absolute sm:right-[50%] sm:translate-x-[50%] w-full justify-center space-x-5 sm:space-x-10 font-medium">
-              {routes.map((route) => (
-                <li
-                  key={route.name}
-                  className="hover:text-slate-500 mx-2 ease-in-out duration-300 rounded-xl"
-                >
-                  <Link href={route.path} target={route.target}>
-                    {route.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-            <div className="flex sm:w-full w-max justify-end">
-              <SocialLinks />
-            </div>
-          </div>
+    return (
+        <nav className='w-full fixed text-md'>
+            <RestictWidth className='mx-auto flex items-center justify-between p-4 lg:max-w-[200ch] lg:text-xl'>
+                <Link href='/'>
+                    <div className='font-bold text-xl lg:text-3xl'>
+                        xarielah.dev
+                    </div>
+                </Link>
+                <div className='flex items-center space-x-3 lg:space-x-10'>
+                    <div className='hidden sm:flex space-x-5 lg:space-x-10'>
+                        {routes.map((link) => (
+                            <Link
+                                href={link.path}
+                                target={link.target}
+                                key={link.name}
+                            >
+                                {link.name}
+                            </Link>
+                        ))}
+                    </div>
+                    <SocialLinks />
+                    <div className='block sm:hidden'>
+                        <ResponsiveMenu routes={routes} />
+                    </div>
+                </div>
+            </RestictWidth>
         </nav>
-      </RestictWidth>
-    </div>
-  );
+    );
 };
 
 export default Navigation;
