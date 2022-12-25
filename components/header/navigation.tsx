@@ -27,7 +27,7 @@ const Navigation = () => {
     ];
 
     return (
-        <nav className='w-full fixed text-md z-50'>
+        <nav className='w-full fixed text-md z-[999]'>
             <RestictWidth className='mx-auto flex items-center justify-between p-4 lg:max-w-[200ch] lg:text-xl'>
                 <Link href='/'>
                     <div className='font-bold text-xl lg:text-3xl'>
