@@ -16,10 +16,8 @@ const Information = () => {
                 </h4>
                 <ProfileTags />
                 <article className='my-10'>
-                    <h5 className='text-center text-2xl my-3 font-bold text-gray-500 dark:text-gray-400'>
-                        Heading
-                    </h5>
-                    <p className='text-gray-500 dark:text-gray-400'>
+                    <h5 className='text-center paragraph-title'>Heading</h5>
+                    <p className='paragraph'>
                         Track work across the enterprise through an open,
                         collaborative platform. Link issues across Jira and
                         ingest data from other software development tools, so

@@ -1,4 +1,5 @@
-import SearchProjects from '../components/pages/home/search-projects';
+import WebDev from '../components/pages/home/web-dev';
+import CroockedContainer from '../components/ui-elements/containers/croocked-container';
 import useWindow from '../hooks/use-window';
 
 export default function Home() {
@@ -22,7 +23,10 @@ export default function Home() {
                     <span className='font-bold'>Israel</span>.
                 </p>
             </div>
-            <SearchProjects />
+            <CroockedContainer className='md:py-24'>
+                <WebDev />
+            </CroockedContainer>
+            {/* <SearchProjects /> */}
         </section>
     );
 }

@@ -42,7 +42,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
             <header className='flex justify-center'>
                 <Navigation />
             </header>
-            <main className='pt-20 px-5'>{children}</main>
+            <main className='pt-20 px-5 overflow-hidden'>{children}</main>
             <Footer />
         </>
     );
