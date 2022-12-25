@@ -4,7 +4,7 @@
 
 body {
   font-family: "Roboto Slab", serif;
-  @apply dark:bg-gray-800;
+  @apply dark:bg-gray-800 text-white;
 }
 
 .main-title {
@@ -34,4 +34,16 @@ body {
 
 .classic-btn {
   @apply text-stone-600 font-bold border-2 border-stone-600 py-2 px-4 rounded-xl text-xl hover:bg-stone-200 ease-in-out duration-300;
+}
+
+.paragraph {
+  @apply text-gray-500 dark:text-gray-400;
+}
+
+.paragraph-title {
+  @apply text-2xl my-3 font-bold text-gray-500 dark:text-gray-400;
+}
+
+.round-image {
+  @apply rounded-full object-cover p-1 ring-1 ring-gray-400;
 }

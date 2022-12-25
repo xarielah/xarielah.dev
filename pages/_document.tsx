@@ -23,7 +23,7 @@ export default function Document() {
                     href='https://unpkg.com/flowbite@1.5.5/dist/flowbite.min.css'
                 />
             </Head>
-            <body className='bg-stone-400 text-white'>
+            <body>
                 <Main />
                 <NextScript />
             </body>
