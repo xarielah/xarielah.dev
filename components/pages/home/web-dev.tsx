@@ -38,8 +38,7 @@ const WebDev = () => {
             </span>
             !`,
             img: '/images/graph.gif',
-            //Todo: replace me
-            alt: 'replaceme!',
+            alt: 'a graph growing',
         },
     ];
 
