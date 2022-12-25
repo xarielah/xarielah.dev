@@ -8,7 +8,7 @@ const NotFound = () => {
                 <h1 className='main-title'>404</h1>
                 <h1 className='main-title'>Page was not found.</h1>
             </div>
-            <p>
+            <p className='paragraph text-3xl'>
                 You might be looking for another page I guess.
                 <br />
                 You can click below and go back to the home page, I serve some

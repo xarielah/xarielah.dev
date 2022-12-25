@@ -43,34 +43,39 @@ const WebDev = () => {
     ];
 
     return (
-        <div className='flex flex-col text-center items-center justify-center space-y-8'>
-            <div className='flex flex-col lg:flex-row lg:space-y-0 lg:space-x-10 items-center space-y-8 lg:mb-14'>
+        <div className='flex flex-col text-center items-center justify-center space-y-8 min-h-screen md:min-h-max lg:snap-align-none lg:snap-none snap-y snap-mandatory'>
+            <div className='flex flex-col lg:flex-row lg:space-y-0 lg:space-x-10 items-center space-y-5 lg:mb-14 md:h-max h-screen snap-end lg:snap-align-none lg:snap-type-none justify-center'>
                 <img
                     src='/images/web-dev.gif'
-                    className='round-image w-56 h-56 lg:hidden'
+                    className='round-image w-40 h-40 md:w-56 md:h-56 lg:hidden'
                     alt='Animation of developers that are coding'
                 />
-                <h4 className='paragraph-title md:text-7xl'>
-                    What is <b>Web {width < 768 ? 'Dev' : 'Development'}</b> for
-                    me?
-                </h4>
+                <div>
+                    <h4 className='paragraph-title md:text-4xl lg:text-5xl'>
+                        What is <b>Web {width < 768 ? 'Dev' : 'Development'}</b>{' '}
+                        for me?
+                    </h4>
+                    <p className='paragraph lg:hidden'>
+                        Web Development for me is...
+                    </p>
+                </div>
             </div>
-            <div className='flex flex-col lg:flex-row space-y-8 lg:space-y-0 lg:space-x-20 justify-center items-center lg:items-start'>
+            <div className='flex flex-col lg:flex-row space-y-8 px-5 lg:space-y-0 lg:space-x-20 justify-center items-center lg:items-start'>
                 {sayings.map((say) => (
                     <div
                         key={say.alt}
-                        className='w-full flex flex-row lg:flex-col lg:space-y-10 lg:w-1/3 items-center'
+                        className='w-full flex flex-col space-y-6 lg:space-y-10 lg:w-1/3 items-center justify-center h-screen lg:h-auto snap-end lg:snap-align-none'
                     >
                         <img
                             src={say.img}
-                            className='round-image w-52 h-52 hidden lg:block'
+                            className='round-image w-40 h-40 lg:w-52 lg:h-52'
                             alt={say.alt}
                         />
                         <p
                             dangerouslySetInnerHTML={{
                                 __html: say.text,
                             }}
-                            className='paragraph text-2xl md:text-3xl font-light w-full'
+                            className='paragraph text-xl md:text-2xl font-light w-full'
                         />
                     </div>
                 ))}

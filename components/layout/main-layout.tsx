@@ -42,8 +42,10 @@ const MainLayout = ({ children }: MainLayoutProps) => {
             <header className='flex justify-center'>
                 <Navigation />
             </header>
-            <main className='pt-20 px-5 overflow-hidden'>{children}</main>
-            <Footer />
+            <main className='px-5 overflow-hidden'>{children}</main>
+            //Todo: Footer is messing up the snap effect abit - maybe make it a
+            whole section or leave it like that
+            {/* <Footer /> */}
         </>
     );
 };
