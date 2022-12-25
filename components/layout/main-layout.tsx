@@ -43,7 +43,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
                 <Navigation />
             </header>
             <main className='px-5 overflow-hidden'>{children}</main>
-            //Todo: Footer is messing up the snap effect abit - maybe make it a
+            {/* //Todo: Footer is messing up the snap effect abit - maybe make it a */}
             whole section or leave it like that
             {/* <Footer /> */}
         </>
