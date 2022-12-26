@@ -20,6 +20,10 @@ const Navigation = () => {
       name: 'About',
     },
     {
+      path: '/contact',
+      name: 'Contact Me',
+    },
+    {
       path: 'https://github.com/xarielah',
       name: '@GitHub',
       target: '_blank',
