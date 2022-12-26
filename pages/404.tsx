@@ -11,7 +11,7 @@ const NotFound = () => {
       <p className="paragraph text-3xl">
         You might be looking for another page I guess.
         <br />
-        You can click below and go back to the home page, I serve some bisquites and drinks.
+        You can click below and go back to the home page, I serve some bisqnpuites and drinks.
       </p>
       <Link href="/">
         <button className="classic-btn">Go Home</button>
