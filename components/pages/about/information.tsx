@@ -1,6 +1,6 @@
-import GeneralContainer from "../../layout/general-container";
-import RestictWidth from "../../layout/restrict-width";
-import ProfileTags from "./profile-tags";
+import GeneralContainer from '../../layout/general-container';
+import RestictWidth from '../../layout/restrict-width';
+import ProfileTags from './profile-tags';
 
 const Information = () => {
   return (
@@ -16,10 +16,9 @@ const Information = () => {
         <article className="my-10">
           <h5 className="text-center paragraph-title">Heading</h5>
           <p className="paragraph">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate
-            qui, obcaecati libero perspiciatis ipsum hic, incidunt, et dicta
-            praesentium suscipit asperiores. Ratione sapiente doloribus nam
-            libero nesciunt ducimus fugit odit!
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate qui, obcaecati
+            libero perspiciatis ipsum hic, incidunt, et dicta praesentium suscipit asperiores.
+            Ratione sapiente doloribus nam libero nesciunt ducimus fugit odit!
           </p>
           <div className="inline-flex justify-center items-center w-full">
             <hr className="my-8 w-64 h-1 bg-gray-200 rounded border-0 dark:bg-gray-700" />
@@ -39,10 +38,9 @@ const Information = () => {
             </div>
           </div>
           <p className="text-gray-500 dark:text-gray-400">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta
-            rerum, necessitatibus nam aspernatur consectetur dolores maxime
-            corporis harum nobis in repellendus quasi, nihil distinctio earum
-            beatae laborum maiores pariatur inventore.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta rerum, necessitatibus
+            nam aspernatur consectetur dolores maxime corporis harum nobis in repellendus quasi,
+            nihil distinctio earum beatae laborum maiores pariatur inventore.
           </p>
         </article>
       </RestictWidth>

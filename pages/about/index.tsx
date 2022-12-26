@@ -4,12 +4,12 @@ import Information from '../../components/pages/about/information';
 import Technologies from '../../components/pages/about/technologies';
 
 const About = () => {
-    return (
-        <section>
-            <Information />
-            {/* <Technologies /> */}
-        </section>
-    );
+  return (
+    <section>
+      <Information />
+      {/* <Technologies /> */}
+    </section>
+  );
 };
 
 export default About;
