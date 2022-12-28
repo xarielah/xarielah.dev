@@ -7,8 +7,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const ghdata = await fetch('https://api.github.com/users/xarielah/repos?sort=updated');
     const data = await ghdata.json();
 
-    if (data.length > 3) {
-      res.status(ApiSuccessCodes.SUCCESS).json(data.slice(0, 3));
+    if (data.length > 9) {
+      res.status(ApiSuccessCodes.SUCCESS).json(data.slice(0, 9));
     } else {
       res.status(ApiSuccessCodes.SUCCESS).json(data);
     }
