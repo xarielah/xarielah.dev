@@ -5,7 +5,8 @@ import CroockedContainer from '../components/ui-elements/containers/croocked-con
 import { GitHubUserRepo } from '../types/api/github-user-data.type';
 
 export async function getServerSideProps() {
-  const fetchGitHubData = await fetch(`http://localhost:3000/api/github`);
+  const url: string = process.env.BASE_URL ?? 'http://localhost:3000';
+  const fetchGitHubData = await fetch(`${url}/api/github`);
   const data: GitHubUserRepo[] = await fetchGitHubData.json();
 
   return {
@@ -27,10 +28,9 @@ export default function Home({ gitHubData }: any) {
           <WebDev />
         </CroockedContainer>
       </div>
-      <div className="min-h-screen snap-end">
+      {/* <div className="min-h-screen snap-end">
         <GitHubStats gitHubData={gitHubData} />
-      </div>
-      {/* <SearchProjects /> */}
+      </div> */}
     </section>
   );
 }
