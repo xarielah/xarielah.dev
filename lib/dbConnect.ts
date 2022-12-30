@@ -1,5 +1,4 @@
 import mongoose from 'mongoose';
-
 const MONGODB_URI = process.env.MONGODB_URI;
 
 if (!MONGODB_URI) {
@@ -20,6 +19,7 @@ if (!cached) {
 
 async function dbConnect() {
   mongoose.set('strictQuery', true);
+
   if (cached.conn) {
     return cached.conn;
   }

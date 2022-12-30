@@ -4,7 +4,7 @@ import Contact from '../models/contact';
 import { ContactDto } from '../dtos/contact.dto';
 import sgMail from '@sendgrid/mail';
 
-type SGMessage = {
+export type SGMessage = {
   to: string;
   from: string;
   subject: string;
