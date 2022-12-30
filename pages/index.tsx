@@ -5,7 +5,9 @@ import CroockedContainer from '../components/ui-elements/containers/croocked-con
 import { GitHubUserRepo } from '../types/api/github-user-data.type';
 
 export async function getServerSideProps() {
-  const fetchGitHubData = await fetch(`${process.env.BASE_URL}/api/github`);
+  const fetchGitHubData = await fetch(
+    `${process.env.BASE_URL ?? 'http://localhost:3000'}/api/github`
+  );
   const data: GitHubUserRepo[] = await fetchGitHubData.json();
 
   return {
