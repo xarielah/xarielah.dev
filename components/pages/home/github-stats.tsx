@@ -1,4 +1,4 @@
-import { GitHubUserRepo } from '../../../types/api/github-user-data.type';
+import { GitHubUserRepo } from '../../../lib/types/github/github-user-data.type';
 import moment from 'moment';
 import OpenSourceTag from '../../ui-elements/github-repos/open-source.tag';
 
