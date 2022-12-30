@@ -1,8 +1,21 @@
+import GitHubStats from '../components/pages/home/github-stats';
 import Introduction from '../components/pages/home/introduction';
 import WebDev from '../components/pages/home/web-dev';
 import CroockedContainer from '../components/ui-elements/containers/croocked-container';
+import { GitHubUserRepo } from '../types/api/github-user-data.type';
 
-export default function Home() {
+export async function getServerSideProps() {
+  const fetchGitHubData = await fetch(`http://localhost:3000/api/github`);
+  const data: GitHubUserRepo[] = await fetchGitHubData.json();
+
+  return {
+    props: {
+      gitHubData: data,
+    },
+  };
+}
+
+export default function Home({ gitHubData }: any) {
   return (
     <section className="snap-y snap-mandatory overflow-auto overflow-x-hidden w-screen -mx-5 h-screen">
       <div className="snap-end min-h-screen">
@@ -13,6 +26,9 @@ export default function Home() {
         <CroockedContainer>
           <WebDev />
         </CroockedContainer>
+      </div>
+      <div className="min-h-screen snap-end">
+        <GitHubStats gitHubData={gitHubData} />
       </div>
       {/* <SearchProjects /> */}
     </section>
