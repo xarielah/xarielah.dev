@@ -7,7 +7,6 @@ export interface GitHubStatsProps {
 }
 
 const GitHubStats = ({ gitHubData }: GitHubStatsProps) => {
-  console.log(gitHubData);
   return (
     <div className="min-h-screen flex justify-center items-center">
       {/* Container */}
