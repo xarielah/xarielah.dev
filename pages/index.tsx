@@ -2,10 +2,12 @@ import GitHubStats from '../components/pages/home/github-stats';
 import Introduction from '../components/pages/home/introduction';
 import WebDev from '../components/pages/home/web-dev';
 import CroockedContainer from '../components/ui-elements/containers/croocked-container';
-import { GitHubUserRepo } from '../types/api/github-user-data.type';
+import { GitHubUserRepo } from '../lib/types/github/github-user-data.type';
 
 export async function getServerSideProps() {
-  const fetchGitHubData = await fetch(`http://localhost:3000/api/github`);
+  const fetchGitHubData = await fetch(
+    `${process.env.BASE_URL ?? 'http://localhost:3000'}/api/github`
+  );
   const data: GitHubUserRepo[] = await fetchGitHubData.json();
 
   return {
