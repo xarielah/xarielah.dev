@@ -8,4 +8,5 @@ export type GitHubUserRepo = {
   updated_at: string;
   pushed_at: string;
   fork: boolean;
+  homepage: string;
 };
