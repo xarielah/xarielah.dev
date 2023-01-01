@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { ReactNode } from 'react';
 import Footer from '../footer/footer';
 import Navigation from '../header/navigation';
+import RestictWidth from './restrict-width';
 
 interface MainLayoutProps {
   children: ReactNode;
@@ -30,13 +31,15 @@ const MainLayout = ({ children }: MainLayoutProps) => {
         <meta property="og:site_name" content="xarielah.dev" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header className="flex justify-center">
-        <Navigation />
-      </header>
-      <main className="px-5 overflow-hidden">{children}</main>
-      {/* Todo: Footer is messing up the snap effect abit - maybe make it a
+      <RestictWidth className="mx-auto">
+        <header>
+          <Navigation />
+        </header>
+        <main className="app">{children}</main>
+        {/* Todo: Footer is messing up the snap effect abit - maybe make it a
             whole section or leave it like that */}
-      {/* <Footer /> */}
+      </RestictWidth>
+      <Footer />
     </>
   );
 };

@@ -4,7 +4,18 @@
 
 body {
   font-family: 'Roboto Slab', serif;
-  @apply dark:bg-gray-800 text-white relative;
+  background-color: #ffe5e3;
+  background-image: linear-gradient(19deg, #ffe5e3 0%, #ffffff 39%, #f3f1fd 81%, #ffffff 100%);
+
+  @apply dark:bg-gray-800 text-[#0e0e0e] relative;
+}
+
+.app {
+  height: calc(100vh - 195px - 2rem);
+}
+
+.app > section {
+  height: 100%;
 }
 
 .main-title {

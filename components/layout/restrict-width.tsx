@@ -6,7 +6,7 @@ interface RestictWidthProps {
 }
 
 const RestictWidth = ({ children, className }: RestictWidthProps) => {
-  return <div className={`max-w-[120ch] ${className ? className : ''}`}>{children}</div>;
+  return <div className={`max-w-[1340px] ${className ? className : ''}`}>{children}</div>;
 };
 
 export default RestictWidth;

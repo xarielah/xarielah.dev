@@ -39,8 +39,6 @@ const ContactForm = ({ swapLoading, loading }: ContactFormProps) => {
       .then((res) => res.json())
       .catch((err) => console.log(err))
       .finally(() => swapLoading(false));
-
-    console.log(answer);
   };
 
   return (
