@@ -1,7 +1,6 @@
 import { IsEmail, MaxLength, IsNotEmpty, IsString } from 'class-validator';
 
 export class ContactDto {
-  // Contact Model Data Transfer Object
   @IsNotEmpty()
   @MaxLength(16)
   @IsString()

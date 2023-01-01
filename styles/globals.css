@@ -39,3 +39,7 @@ body {
 .round-image {
   @apply rounded-full object-cover p-1 ring-1 ring-gray-400;
 }
+
+.form-error-field {
+  @apply text-orange-200 mt-2 ml-2 py-1 px-2 w-max bg-gray-900 rounded-xl text-sm;
+}
