@@ -48,11 +48,6 @@ const ContactForm = ({ swapLoading, loading }: ContactFormProps) => {
           <h2 className="paragraph-title md:text-4xl lg:text-5xl">Contact ME</h2>
           <img src="/images/chat.svg" className="absolute w-14 h-14 right-10 -z-1" />
         </div>
-        <p className="paragraph md:text-2xl">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, vero. Accusantium ullam est
-          laborum asperiores non nobis ipsum sunt placeat, dolor, saepe ab, dicta debitis qui
-          doloremque numquam ea adipisci.
-        </p>
       </div>
       <form
         noValidate
@@ -62,7 +57,7 @@ const ContactForm = ({ swapLoading, loading }: ContactFormProps) => {
         <div className="mb-6">
           <label
             htmlFor="name"
-            className="block mb-2 text-md font-medium text-gray-900 dark:text-white"
+            className="block mb-2 text-2xl font-medium text-gray-900 dark:text-white"
           >
             Name
           </label>
@@ -77,7 +72,7 @@ const ContactForm = ({ swapLoading, loading }: ContactFormProps) => {
         <div className="mb-6">
           <label
             htmlFor="email"
-            className="block mb-2 text-md font-medium text-gray-900 dark:text-white"
+            className="block mb-2 text-2xl font-medium text-gray-900 dark:text-white"
           >
             Email
           </label>
@@ -92,7 +87,7 @@ const ContactForm = ({ swapLoading, loading }: ContactFormProps) => {
         <div className="mb-6">
           <label
             htmlFor="description"
-            className="block mb-2 text-md font-medium text-gray-900 dark:text-white"
+            className="block mb-2 text-2xl font-medium text-gray-900 dark:text-white"
           >
             How can I help you? {':)'}
           </label>

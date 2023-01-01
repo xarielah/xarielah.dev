@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import AnimationLayout from '../../components/layout/animation-layout';
 import ContactForm from '../../components/pages/contact/form';
 
 const Contact = () => {
@@ -7,9 +8,11 @@ const Contact = () => {
   const swapLoading = (value: boolean): void => setIsLoading(value);
 
   return (
-    <section className="min-h-screen min-w-screen flex items-center justify-center">
-      <ContactForm swapLoading={swapLoading} loading={isLoading} />
-    </section>
+    <AnimationLayout>
+      <section className="flex items-center justify-center">
+        <ContactForm swapLoading={swapLoading} loading={isLoading} />
+      </section>
+    </AnimationLayout>
   );
 };
 

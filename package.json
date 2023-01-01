@@ -19,6 +19,8 @@
     "class-validator": "^0.14.0",
     "eslint": "8.30.0",
     "eslint-config-next": "13.1.0",
+    "framer-motion": "^8.0.2",
+    "hamburger-react": "^2.5.0",
     "moment": "^2.29.4",
     "mongoose": "^6.8.2",
     "next": "13.1.0",

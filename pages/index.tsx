@@ -1,3 +1,4 @@
+import AnimationLayout from '../components/layout/animation-layout';
 import GitHubStats from '../components/pages/home/github-stats';
 import Introduction from '../components/pages/home/introduction';
 import Skills from '../components/pages/home/skills';
@@ -20,13 +21,15 @@ export async function getServerSideProps() {
 
 export default function Home({ gitHubData }: any) {
   return (
-    <section className="flex">
-      <article className="w-1/2">
-        <Introduction />
-      </article>
-      <article className="w-1/2">
-        <Skills />
-      </article>
-    </section>
+    <AnimationLayout>
+      <section className="flex h-full items-center">
+        <article className="w-1/2">
+          <Introduction />
+        </article>
+        <article className="w-1/2">
+          <Skills />
+        </article>
+      </section>
+    </AnimationLayout>
   );
 }

@@ -7,11 +7,11 @@ body {
   background-color: #ffe5e3;
   background-image: linear-gradient(19deg, #ffe5e3 0%, #ffffff 39%, #f3f1fd 81%, #ffffff 100%);
 
-  @apply dark:bg-gray-800 text-[#0e0e0e] relative;
+  @apply text-[#0e0e0e];
 }
 
 .app {
-  height: calc(100vh - 195px - 2rem);
+  min-height: calc(100vh - 234px);
 }
 
 .app > section {

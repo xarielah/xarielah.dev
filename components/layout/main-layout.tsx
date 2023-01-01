@@ -31,14 +31,12 @@ const MainLayout = ({ children }: MainLayoutProps) => {
         <meta property="og:site_name" content="xarielah.dev" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <RestictWidth className="mx-auto">
-        <header>
-          <Navigation />
-        </header>
+      <header className="max-w-[1350px] mx-auto">
+        <Navigation />
+      </header>
+      <div className="mx-auto max-w-[1350px] h-full">
         <main className="app">{children}</main>
-        {/* Todo: Footer is messing up the snap effect abit - maybe make it a
-            whole section or leave it like that */}
-      </RestictWidth>
+      </div>
       <Footer />
     </>
   );
