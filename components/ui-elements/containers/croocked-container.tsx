@@ -1,5 +1,4 @@
 import { ReactNode } from 'react';
-import RestictWidth from '../../layout/restrict-width';
 
 interface CroockedContainerProps {
   children: ReactNode;
