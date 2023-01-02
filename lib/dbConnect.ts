@@ -17,6 +17,11 @@ if (!cached) {
   cached = (global as any).mongoose = { conn: null, promise: null };
 }
 
+/**
+ * Establish a database connection with mongodb. either from cached connection or a new one.
+ * @returns {void} void
+ */
+
 async function dbConnect() {
   mongoose.set('strictQuery', true);
 

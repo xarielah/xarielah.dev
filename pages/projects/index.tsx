@@ -1,12 +1,13 @@
-import React from 'react';
 import AnimationLayout from '../../components/layout/animation-layout';
 
-const About = () => {
+const Projects = () => {
   return (
     <AnimationLayout>
-      <section>about</section>
+      <section>
+        <h1>Projects</h1>
+      </section>
     </AnimationLayout>
   );
 };
 
-export default About;
+export default Projects;

@@ -1,38 +1,18 @@
-import GitHubStats from '../components/pages/home/github-stats';
+import AnimationLayout from '../components/layout/animation-layout';
 import Introduction from '../components/pages/home/introduction';
-import WebDev from '../components/pages/home/web-dev';
-import CroockedContainer from '../components/ui-elements/containers/croocked-container';
-import { GitHubUserRepo } from '../lib/types/github/github-user-data.type';
-
-export async function getServerSideProps() {
-  const fetchGitHubData = await fetch(
-    `${process.env.BASE_URL ?? 'http://localhost:3000'}/api/github`
-  );
-  const data: GitHubUserRepo[] = await fetchGitHubData.json();
-
-  return {
-    props: {
-      gitHubData: data,
-    },
-  };
-}
+import Skills from '../components/pages/home/skills';
 
 export default function Home({ gitHubData }: any) {
   return (
-    <section className="snap-y snap-mandatory overflow-auto overflow-x-hidden w-screen -mx-5 h-screen">
-      <div className="snap-end min-h-screen">
-        <Introduction />
-      </div>
-
-      <div className="min-h-screen snap-align-none lg:snap-end">
-        <CroockedContainer>
-          <WebDev />
-        </CroockedContainer>
-      </div>
-      <div className="min-h-screen snap-end">
-        <GitHubStats gitHubData={gitHubData} />
-      </div>
-      {/* <SearchProjects /> */}
-    </section>
+    <AnimationLayout>
+      <section className="flex flex-col lg:flex-row">
+        <article className="basis-1/2 p-4 text-center lg:text-left">
+          <Introduction />
+        </article>
+        <article className="basis-1/2 p-4 overflow-hidden lg:overflow-visible">
+          <Skills />
+        </article>
+      </section>
+    </AnimationLayout>
   );
 }

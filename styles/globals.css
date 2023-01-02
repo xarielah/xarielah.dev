@@ -4,7 +4,57 @@
 
 body {
   font-family: 'Roboto Slab', serif;
-  @apply dark:bg-gray-800 text-white relative;
+  @apply text-slate-900 dark:text-white ease-in-out duration-500;
+}
+
+@layer utilities {
+  .dark-bg-animation {
+    animation: 15s infinite bodyBg ease alternate;
+    background-image: linear-gradient(
+      135deg,
+      #151e29 0%,
+      #000f1c 24%,
+      #1a1a31 49%,
+      #000f1c 75%,
+      #0c1e2f 100%
+    );
+
+    background-size: 200% 200%;
+  }
+
+  .bg-animation {
+    animation: 15s infinite bodyBg ease alternate;
+    background-image: linear-gradient(
+      64deg,
+      #f4efff 0%,
+      #ffffff 21%,
+      #f6fbea 39%,
+      #ffffff 60%,
+      #ffeafe 80%,
+      #ffffff 100%
+    );
+
+    background-size: 200% 200%;
+  }
+
+  @keyframes bodyBg {
+    from {
+      background-position: 0 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    to {
+      background-position: 0% 50%;
+    }
+  }
+}
+
+.app {
+  min-height: calc(100vh - 274px);
+  @apply flex items-center;
 }
 
 .main-title {
@@ -38,4 +88,23 @@ body {
 
 .round-image {
   @apply rounded-full object-cover p-1 ring-1 ring-gray-400;
+}
+
+.form-error-field {
+  @apply text-orange-200 mt-2 ml-2 py-1 px-2 w-max bg-gray-900 rounded-xl text-sm;
+}
+
+.refresh {
+  padding: 10px;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  width: 20px;
+  height: 20px;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
