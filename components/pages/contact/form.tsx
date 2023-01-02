@@ -42,18 +42,8 @@ const ContactForm = ({ swapLoading, loading }: ContactFormProps) => {
   };
 
   return (
-    <div className="w-full lg:w-5/6 flex flex-col justify-center items-center space-y-2 md:space-y-10">
-      <div className="text-center w-full xl:w-1/2 flex flex-col md:space-y-4">
-        <div className="flex space-x-4 relative justify-center">
-          <h2 className="paragraph-title md:text-4xl lg:text-5xl">Contact ME</h2>
-          <img src="/images/chat.svg" className="absolute w-14 h-14 right-10 -z-1" />
-        </div>
-      </div>
-      <form
-        noValidate
-        className="w-full p-5 md:p-0 md:w-3/4 xl:w-1/2 mx-auto"
-        onSubmit={handleSubmit(onSubmit)}
-      >
+    <div className="w-full">
+      <form noValidate className="w-full p-5 md:p-0 mx-auto" onSubmit={handleSubmit(onSubmit)}>
         <div className="mb-6">
           <label
             htmlFor="name"

@@ -24,7 +24,7 @@ const Menu = ({ toggleAnimation, onToggle }: MenuProps) => {
       initial={'initial'}
       animate={toggleAnimation ? 'open' : 'closed'}
       variants={background}
-      className={`absolute bg-animation min-h-screen w-screen flex flex-col z-50 space-y-10 text-8xl justify-center items-center top-0 left-0 overflow-y-hidden overflow-x-hidden`}
+      className={`absolute bg-animation min-h-screen w-screen flex flex-col z-50 space-y-10 text-6xl lg:text-8xl justify-center items-center top-0 left-0 overflow-y-hidden overflow-x-hidden`}
     >
       {routes.map((route) => (
         <motion.div

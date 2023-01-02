@@ -34,7 +34,7 @@ const Navigation = () => {
   return (
     <nav className="w-full flex items-center justify-between p-8">
       <Link href="/">
-        <motion.button whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+        <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
           <div className="flex items-center">
             <div className="bg-gray-100 rounded-full p-1 mr-2">
               <img src="/images/memoji.png" className="w-10 h-10 lg:w-14 lg:h-14" />

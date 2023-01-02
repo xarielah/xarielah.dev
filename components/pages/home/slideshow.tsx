@@ -39,7 +39,7 @@ export const Slideshow = () => {
   };
 
   return (
-    <div className="relative h-full flex justify-center items-center my-28 lg: my-0">
+    <div className="relative h-full flex justify-center items-center my-36 lg:my-0">
       <AnimatePresence>
         <motion.div
           key={page}

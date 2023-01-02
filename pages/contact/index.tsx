@@ -9,7 +9,7 @@ const Contact = () => {
 
   return (
     <AnimationLayout>
-      <section className="flex items-center justify-center">
+      <section>
         <ContactForm swapLoading={swapLoading} loading={isLoading} />
       </section>
     </AnimationLayout>
