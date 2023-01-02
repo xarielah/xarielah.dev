@@ -13,9 +13,7 @@ const CroockedContainer = ({ children, className }: CroockedContainerProps) => {
         className={`z-10 py-5 origin-top-right dark:bg-gray-900 min-h-[70%] flex items-center px-5 md:px-10  ${
           className ? className : ''
         }`}
-      >
-        <RestictWidth className="mx-auto xl:max-w-[90%]">{children}</RestictWidth>
-      </div>
+      ></div>
       <div className="dark:bg-gray-900 w-full h-14 -rotate-1 -translate-y-5"></div>
     </section>
   );
