@@ -19,7 +19,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="flex flex-col items-center justify-center text-center p-10 bg-[#fafafa]/30 font-bold">
+    <footer className="flex flex-col items-center justify-center text-center p-10 bg-[#fafafa]/30 dark:bg-slate-900/20 font-bold">
       <div className="flex space-x-1 items-center">
         <Link href={'https://www.linkedin.com/in/ariel-aharon-580899202/'} target={'_blank'}>
           <IoLogoLinkedin className="w-6 h-6" />
@@ -29,6 +29,12 @@ const Footer = () => {
         </Link>
       </div>
       <p className="uppercase font-light text-[.75em]">Ariel Aharon &copy; {currentYear}</p>
+      <p className="uppercase font-light text-[.75em]">
+        Inspired by{' '}
+        <b>
+          <Link href="https://www.tamirassayag.com/">Tamir Assayag</Link>
+        </b>
+      </p>
     </footer>
   );
 };

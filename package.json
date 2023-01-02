@@ -25,6 +25,7 @@
     "mongoose": "^6.8.2",
     "next": "13.1.0",
     "next-api-decorators": "^2.0.0",
+    "next-theme": "^0.1.5",
     "popmotion": "^11.0.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",

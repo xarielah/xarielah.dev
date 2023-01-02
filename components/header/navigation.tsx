@@ -3,13 +3,11 @@ import { Rotate as Hamburger } from 'hamburger-react';
 import { useState } from 'react';
 import Menu from './menu';
 import { motion } from 'framer-motion';
+import ThemeSwitchButton from '../ui-elements/theme-switch/theme-switch-button';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [show, setShow] = useState<boolean>(false);
-
-  console.log(show);
-  console.log(isOpen);
 
   /**
    * onToggle - prevents from menu to block the view,
@@ -36,15 +34,18 @@ const Navigation = () => {
       <Link href="/">
         <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
           <div className="flex items-center">
-            <div className="bg-gray-100 rounded-full p-1 mr-2">
+            <div className="ring-2 bg-white ring-gray-100 rounded-full p-2 mr-4">
               <img src="/images/memoji.png" className="w-10 h-10 lg:w-14 lg:h-14" />
             </div>
             <div className="font-bold text-2xl lg:text-3xl">xarielah</div>
           </div>
         </motion.button>
       </Link>
-      <div className="z-[51]" onClick={onToggle}>
-        <Hamburger toggled={isOpen} />
+      <div className="flex items-center space-x-4">
+        <ThemeSwitchButton />
+        <div className="z-[51]" onClick={onToggle}>
+          <Hamburger toggled={isOpen} />
+        </div>
       </div>
       {show ? <Menu toggleAnimation={isOpen} onToggle={onToggle} /> : ''}
     </nav>

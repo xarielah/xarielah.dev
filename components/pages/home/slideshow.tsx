@@ -72,13 +72,13 @@ export const Slideshow = () => {
       </AnimatePresence>
       <div className="flex justify-between absolute w-full">
         <div
-          className="cursor-pointer bg-gray-100/50 flex justify-center items-center rounded-full w-10 h-10"
+          className="cursor-pointer bg-gray-100/50 dark:bg-slate-800 ring-2 dark:ring-slate-400/50 ring-slate-600/30 flex justify-center items-center rounded-full w-10 h-10"
           onClick={() => paginate(1)}
         >
           {'<'}
         </div>
         <div
-          className="cursor-pointer bg-gray-100/50 flex justify-center items-center rounded-full w-10 h-10"
+          className="cursor-pointer bg-gray-100/50 dark:bg-slate-800 ring-2 dark:ring-slate-400/50 ring-slate-600/30 flex justify-center items-center rounded-full w-10 h-10"
           onClick={() => paginate(-1)}
         >
           {'>'}

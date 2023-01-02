@@ -1,8 +1,12 @@
 import { Html, Head, Main, NextScript } from 'next/document';
 
 export default function Document() {
+  // if (typeof window !== undefined) {
+  //   const theme = localStorage.getItem('theme') ?? 'light';
+  // }
+
   return (
-    <Html lang="en" className="light">
+    <Html lang="en" className={''}>
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
@@ -13,7 +17,7 @@ export default function Document() {
         <script src="https://unpkg.com/flowbite@1.5.5/dist/flowbite.js" defer></script>
         <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.5/dist/flowbite.min.css" />
       </Head>
-      <body className="bg-animation">
+      <body className="bg-animation dark:dark-bg-animation bg-transparent ">
         <Main />
         <NextScript />
       </body>

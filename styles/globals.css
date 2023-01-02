@@ -4,40 +4,56 @@
 
 body {
   font-family: 'Roboto Slab', serif;
-  @apply text-slate-900;
+  @apply text-slate-900 dark:text-white ease-in-out duration-500;
 }
 
-.bg-animation {
-  animation: 15s infinite bodyBg ease alternate;
-  background-image: linear-gradient(
-    64deg,
-    #f4efff 0%,
-    #ffffff 21%,
-    #f6fbea 39%,
-    #ffffff 60%,
-    #ffeafe 80%,
-    #ffffff 100%
-  );
+@layer utilities {
+  .dark-bg-animation {
+    animation: 15s infinite bodyBg ease alternate;
+    background-image: linear-gradient(
+      135deg,
+      #151e29 0%,
+      #000f1c 24%,
+      #1a1a31 49%,
+      #000f1c 75%,
+      #0c1e2f 100%
+    );
 
-  background-size: 200% 200%;
-}
-
-@keyframes bodyBg {
-  from {
-    background-position: 0 50%;
+    background-size: 200% 200%;
   }
 
-  50% {
-    background-position: 100% 50%;
+  .bg-animation {
+    animation: 15s infinite bodyBg ease alternate;
+    background-image: linear-gradient(
+      64deg,
+      #f4efff 0%,
+      #ffffff 21%,
+      #f6fbea 39%,
+      #ffffff 60%,
+      #ffeafe 80%,
+      #ffffff 100%
+    );
+
+    background-size: 200% 200%;
   }
 
-  to {
-    background-position: 0% 50%;
+  @keyframes bodyBg {
+    from {
+      background-position: 0 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    to {
+      background-position: 0% 50%;
+    }
   }
 }
 
 .app {
-  min-height: calc(100vh - 234px);
+  min-height: calc(100vh - 274px);
   @apply flex items-center;
 }
 
