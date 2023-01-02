@@ -4,18 +4,41 @@
 
 body {
   font-family: 'Roboto Slab', serif;
-  background-color: #ffe5e3;
-  background-image: linear-gradient(19deg, #ffe5e3 0%, #ffffff 39%, #f3f1fd 81%, #ffffff 100%);
+  @apply text-slate-900;
+}
 
-  @apply text-[#0e0e0e];
+.bg-animation {
+  animation: 15s infinite bodyBg ease alternate;
+  background-image: linear-gradient(
+    64deg,
+    #f4efff 0%,
+    #ffffff 21%,
+    #f6fbea 39%,
+    #ffffff 60%,
+    #ffeafe 80%,
+    #ffffff 100%
+  );
+
+  background-size: 200% 200%;
+}
+
+@keyframes bodyBg {
+  from {
+    background-position: 0 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  to {
+    background-position: 0% 50%;
+  }
 }
 
 .app {
   min-height: calc(100vh - 234px);
-}
-
-.app > section {
-  height: 100%;
+  @apply flex items-center;
 }
 
 .main-title {
@@ -53,4 +76,19 @@ body {
 
 .form-error-field {
   @apply text-orange-200 mt-2 ml-2 py-1 px-2 w-max bg-gray-900 rounded-xl text-sm;
+}
+
+.refresh {
+  padding: 10px;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  width: 20px;
+  height: 20px;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }

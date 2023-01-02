@@ -2,7 +2,6 @@ import Head from 'next/head';
 import { ReactNode } from 'react';
 import Footer from '../footer/footer';
 import Navigation from '../header/navigation';
-import RestictWidth from './restrict-width';
 
 interface MainLayoutProps {
   children: ReactNode;
@@ -34,7 +33,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
       <header className="max-w-[1350px] mx-auto">
         <Navigation />
       </header>
-      <div className="mx-auto max-w-[1350px] h-full">
+      <div className="mx-auto max-w-[1350px]">
         <main className="app">{children}</main>
       </div>
       <Footer />

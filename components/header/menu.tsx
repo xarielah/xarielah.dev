@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { routes } from '../../lib/data/routes';
 
 const background = {
+  initial: { opacity: 0 },
   open: { opacity: 1, x: 0 },
   closed: { opacity: 0, x: 0 },
 };
@@ -11,49 +13,28 @@ const items = {
   closed: { opacity: 0, x: 0 },
 };
 
-export type Route = {
-  path: string;
-  name: string;
-  target?: string;
-};
-
-const routes: Route[] = [
-  {
-    path: '/',
-    name: 'Home',
-  },
-  {
-    path: '/about',
-    name: 'About',
-  },
-  {
-    path: '/projects',
-    name: 'Projects',
-  },
-  {
-    path: '/contact',
-    name: 'Contact',
-  },
-];
-
-export interface MenuProps {
-  isOpen: boolean;
-  onClose: () => void;
+interface MenuProps {
+  toggleAnimation: boolean;
+  onToggle: () => void;
 }
 
-const Menu = ({ isOpen, onClose }: MenuProps) => {
+const Menu = ({ toggleAnimation, onToggle }: MenuProps) => {
   return (
     <motion.aside
-      animate={isOpen ? 'open' : 'closed'}
+      initial={'initial'}
+      animate={toggleAnimation ? 'open' : 'closed'}
       variants={background}
-      className={`absolute min-h-screen w-screen bg-purple-100 flex flex-col space-y-10 text-8xl justify-center items-center top-0 left-0 z-50 overflow-y-hidden overflow-x-hidden ${
-        isOpen ? '' : 'hidden'
-      }`}
+      className={`absolute bg-animation min-h-screen w-screen flex flex-col z-50 space-y-10 text-8xl justify-center items-center top-0 left-0 overflow-y-hidden overflow-x-hidden`}
     >
       {routes.map((route) => (
-        <Link href={route.path} onClick={onClose} key={route.name}>
-          {route.name}
-        </Link>
+        <motion.div
+          whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 0.8 }}
+          key={route.name}
+          onClick={onToggle}
+        >
+          <Link href={route.path}>{route.name}</Link>
+        </motion.div>
       ))}
     </motion.aside>
   );

@@ -16,7 +16,6 @@ const AnimationLayout = ({ children }: AnimationLayoutProps) => {
         stiffness: 260,
         damping: 15,
       }}
-      className="h-full"
     >
       {children}
     </motion.div>

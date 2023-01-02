@@ -13,7 +13,7 @@ export default function Document() {
         <script src="https://unpkg.com/flowbite@1.5.5/dist/flowbite.js" defer></script>
         <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.5/dist/flowbite.min.css" />
       </Head>
-      <body>
+      <body className="bg-animation">
         <Main />
         <NextScript />
       </body>

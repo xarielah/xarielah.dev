@@ -1,9 +1,6 @@
 import AnimationLayout from '../components/layout/animation-layout';
-import GitHubStats from '../components/pages/home/github-stats';
 import Introduction from '../components/pages/home/introduction';
 import Skills from '../components/pages/home/skills';
-import WebDev from '../components/pages/home/web-dev';
-import CroockedContainer from '../components/ui-elements/containers/croocked-container';
 import { GitHubUserRepo } from '../lib/types/github/github-user-data.type';
 
 export async function getServerSideProps() {
@@ -22,11 +19,11 @@ export async function getServerSideProps() {
 export default function Home({ gitHubData }: any) {
   return (
     <AnimationLayout>
-      <section className="flex h-full items-center">
-        <article className="w-1/2">
+      <section className="flex flex-col lg:flex-row">
+        <article className="basis-1/2 p-4 text-center lg:text-left">
           <Introduction />
         </article>
-        <article className="w-1/2">
+        <article className="basis-1/2 p-4 overflow-hidden lg:overflow-visible">
           <Skills />
         </article>
       </section>
