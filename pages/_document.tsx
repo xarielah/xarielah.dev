@@ -1,4 +1,5 @@
 import { Html, Head, Main, NextScript } from 'next/document';
+import Script from 'next/script';
 
 export default function Document() {
   // if (typeof window !== undefined) {
@@ -14,8 +15,8 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;400;500;700;900&display=swap"
           rel="stylesheet"
         />
-        <script src="https://unpkg.com/flowbite@1.5.5/dist/flowbite.js" defer></script>
         <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.5/dist/flowbite.min.css" />
+        <Script src="https://unpkg.com/flowbite@1.5.5/dist/flowbite.js" />
       </Head>
       <body className="bg-animation dark:dark-bg-animation bg-transparent ">
         <Main />
