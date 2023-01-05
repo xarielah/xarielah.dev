@@ -3,19 +3,21 @@ import { motion } from 'framer-motion';
 
 interface AnimationLayoutProps {
   children: ReactNode;
+  className?: string;
 }
 
-const AnimationLayout = ({ children }: AnimationLayoutProps) => {
+const AnimationLayout = ({ children, className }: AnimationLayoutProps) => {
   return (
     <motion.div
-      initial={{ x: 300, opacity: 0 }}
-      animate={{ x: 0, opacity: 1 }}
-      exit={{ x: -300, opacity: 0 }}
+      initial={{ scale: 0.2, opacity: 0 }}
+      animate={{ scale: 1, opacity: 1 }}
+      exit={{ scale: 0.2, opacity: 0 }}
       transition={{
         type: 'spring',
-        stiffness: 260,
-        damping: 15,
+
+        duration: 0.25,
       }}
+      className={className ?? ''}
     >
       {children}
     </motion.div>

@@ -4,8 +4,11 @@ import LoadFromBottom from '../../animation/load-from-bottom';
 
 const Introduction = () => {
   return (
-    <div className="">
-      <LoadFromBottom className="flex flex-col space-y-10 mb-12 justify-center p-2 lg:p-0">
+    <div>
+      <LoadFromBottom
+        initialY={0}
+        className="flex flex-col space-y-10 mb-12 justify-center p-2 lg:p-0"
+      >
         <h1 className="text-6xl sm:text-7x font-bold">
           Its all about <br />
           the <span className="text-purple-600 dark:text-blue-400">code</span>!
@@ -15,7 +18,7 @@ const Introduction = () => {
           a Great, Efficient and a Useful product.
         </p>
       </LoadFromBottom>
-      <LoadFromBottom delay={0.1}>
+      <LoadFromBottom initialY={0} delay={0.1}>
         <span className="flex flex-wrap space-x-5 justify-center lg:justify-start">
           {tags.map((tag) => (
             <motion.span
