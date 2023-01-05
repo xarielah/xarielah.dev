@@ -8,7 +8,7 @@ const Contact = () => {
   const swapLoading = (value: boolean): void => setIsLoading(value);
 
   return (
-    <AnimationLayout>
+    <AnimationLayout className="w-full">
       <section>
         <ContactForm swapLoading={swapLoading} loading={isLoading} />
       </section>
