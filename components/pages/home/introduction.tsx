@@ -14,8 +14,8 @@ const Introduction = () => {
           the <span className="text-purple-600 dark:text-blue-400">code</span>!
         </h1>
         <p className="text-4xl font-light px-2 md:px-8 lg:px-0">
-          Web Development for me is a playgroud of oppurtinities to always have the ability to build
-          a Great, Efficient and a Useful product.
+          Web Development for me is a playground of oppurtinities to always have the ability to
+          build a Great, Efficient and a Useful product.
         </p>
       </LoadFromBottom>
       <LoadFromBottom initialY={0} delay={0.1}>
