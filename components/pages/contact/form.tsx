@@ -85,9 +85,9 @@ const ContactForm = ({ swapLoading, loading }: ContactFormProps) => {
       ) : loading ? (
         <>
           <motion.div
-            initial={{ opacity: 0, x: -300 }}
+            initial={{ opacity: 0, x: -800 }}
             animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 300 }}
+            exit={{ opacity: 0, x: 800 }}
             className="flex flex-col items-center text-center"
           >
             <LoadingElement />
