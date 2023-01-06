@@ -14,7 +14,6 @@ const AnimationLayout = ({ children, className }: AnimationLayoutProps) => {
       exit={{ scale: 0.2, opacity: 0 }}
       transition={{
         type: 'spring',
-
         duration: 0.25,
       }}
       className={className ?? ''}
