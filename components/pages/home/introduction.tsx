@@ -1,5 +1,3 @@
-import { motion } from 'framer-motion';
-import { tags } from '../../../lib/data/tags';
 import LoadFromBottom from '../../animation/load-from-bottom';
 
 const Introduction = () => {

@@ -1,4 +1,3 @@
-import LoadFromBottom from '../../animation/load-from-bottom';
 import { Slideshow } from './slideshow';
 
 const Skills = () => {

@@ -13,11 +13,12 @@ const background = {
 interface MenuProps {
   toggleAnimation: boolean;
   onToggle: () => void;
+  isOnDom: boolean;
 }
 
-const Menu = ({ toggleAnimation, onToggle }: MenuProps) => {
+const Menu = ({ toggleAnimation, onToggle, isOnDom }: MenuProps) => {
   useEffect(() => {
-    if (toggleAnimation) {
+    if (!isOnDom) {
       document.body.classList.add('overflow-hidden');
     } else {
       document.body.classList.remove('overflow-hidden');
