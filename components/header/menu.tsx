@@ -18,7 +18,7 @@ interface MenuProps {
 
 const Menu = ({ toggleAnimation, onToggle, isOnDom }: MenuProps) => {
   useEffect(() => {
-    if (!isOnDom) {
+    if (isOnDom) {
       document.body.classList.add('overflow-hidden');
     } else {
       document.body.classList.remove('overflow-hidden');
