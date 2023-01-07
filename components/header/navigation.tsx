@@ -47,7 +47,7 @@ const Navigation = () => {
           <Hamburger toggled={isOpen} />
         </div>
       </div>
-      {show ? <Menu toggleAnimation={isOpen} onToggle={onToggle} /> : ''}
+      {show ? <Menu toggleAnimation={isOpen} isOnDom={show} onToggle={onToggle} /> : ''}
     </nav>
   );
 };
