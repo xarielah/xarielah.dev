@@ -18,6 +18,14 @@ interface MenuProps {
 
 const Menu = ({ toggleAnimation, onToggle, isOnDom }: MenuProps) => {
   useEffect(() => {
+    /**
+     * This useEffect makes sure coule of things:
+     *
+     * - Scroll for X axis and Y axis are hidden.
+     * - When ever menu is triggered (open / close) user scrolled to top.
+     */
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     if (isOnDom) {
       document.body.classList.add('overflow-hidden');
     } else {
