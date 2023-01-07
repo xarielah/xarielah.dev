@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { useEffect } from 'react';
 import { routes } from '../../lib/data/routes';
 import LoadFromBottom from '../animation/load-from-bottom';
 
@@ -15,12 +16,25 @@ interface MenuProps {
 }
 
 const Menu = ({ toggleAnimation, onToggle }: MenuProps) => {
+  useEffect(() => {
+    if (toggleAnimation) {
+      document.body.classList.add('overflow-hidden');
+    } else {
+      document.body.classList.remove('overflow-hidden');
+    }
+
+    return () => {
+      // Make sure body isn't stuck
+      document.body.classList.remove('overflow-hidden');
+    };
+  }, [toggleAnimation]);
+
   return (
     <motion.aside
       initial={'initial'}
       animate={toggleAnimation ? 'open' : 'closed'}
       variants={background}
-      className={`absolute bg-animation dark:dark-bg-animation min-h-screen w-screen flex flex-col z-50 space-y-10 text-6xl lg:text-8xl justify-center items-center top-0 left-0 overflow-y-hidden overflow-x-hidden`}
+      className={`absolute bg-animation dark:dark-bg-animation h-screen w-screen flex flex-col z-50 space-y-10 text-6xl lg:text-8xl justify-center items-center top-0 left-0`}
     >
       {routes.map((route, index) => (
         <LoadFromBottom key={route.name} delay={index / 10}>

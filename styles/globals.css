@@ -4,7 +4,7 @@
 
 body {
   font-family: 'Roboto Slab', serif;
-  @apply text-slate-900 dark:text-white ease-in-out duration-500;
+  @apply text-slate-900 dark:text-white ease-in-out duration-500 min-h-screen;
 }
 
 @layer utilities {
@@ -57,23 +57,6 @@ body {
   @apply flex items-center;
 }
 
-.main-title {
-  @apply text-5xl md:text-6xl lg:text-7xl font-bold p-3;
-  width: max-content;
-}
-
-.search-input {
-  @apply p-4 rounded-full;
-}
-
-.info-container {
-  @apply flex flex-col text-center items-center space-y-8 my-5 text-2xl;
-}
-
-.info-title {
-  @apply text-4xl text-center font-bold mt-9 lg:mt-0;
-}
-
 .classic-btn {
   @apply text-gray-600 font-bold border-2 border-gray-600 py-2 px-4 rounded-xl text-xl hover:bg-stone-200 ease-in-out duration-300;
 }
@@ -86,25 +69,64 @@ body {
   @apply my-3 font-bold text-gray-500 dark:text-gray-400;
 }
 
-.round-image {
-  @apply rounded-full object-cover p-1 ring-1 ring-gray-400;
-}
-
 .form-error-field {
   @apply text-orange-200 mt-2 ml-2 py-1 px-2 w-max bg-gray-900 rounded-xl text-sm;
 }
 
-.refresh {
-  padding: 10px;
-  position: absolute;
-  background: rgba(0, 0, 0, 0.4);
-  border-radius: 10px;
-  width: 20px;
-  height: 20px;
-  top: 10px;
-  right: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
+.slider {
+  height: 192px;
+  position: relative;
+  width: 100%;
+
+  display: grid;
+  place-items: center;
+  overflow: hidden;
 }
+
+.slide-track2 {
+  width: calc(192px * 24);
+  display: flex;
+  animation: scroll2 25s linear infinite;
+  justify-content: space-between;
+}
+
+.slide {
+  display: grid;
+  place-items: center;
+  transition: 400ms;
+}
+
+.slide:hover {
+  transform: scale(1.2);
+}
+
+@keyframes scroll2 {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(calc(-192px * 8));
+  }
+}
+
+/* 
+@media screen and (max-width: 768px) {
+  .slide-track2 {
+    width: calc(80px * 15);
+  }
+
+  .slide {
+    width: 80px;
+  }
+
+  @keyframes scroll2 {
+    0% {
+      transform: translateX(0px);
+    }
+    100% {
+      transform: translateX(calc(-244px * 24));
+    }
+  }
+}
+
+*/

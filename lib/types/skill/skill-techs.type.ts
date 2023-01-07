@@ -1,4 +1,7 @@
 export type Skillz = {
   label: string;
-  src: string;
+  src: {
+    light: string;
+    dark: string;
+  };
 };
