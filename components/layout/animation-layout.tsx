@@ -1,4 +1,4 @@
-import { ReactNode, useContext, useEffect, useState } from 'react';
+import { ReactNode, useContext } from 'react';
 import { motion } from 'framer-motion';
 import { isMountedContext } from '../../pages/_app';
 
