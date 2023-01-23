@@ -2,12 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+::root {
+  --sliderItemHeight: 240px;
+  --sliderItemHeightMinus: -240px;
+}
+
 body {
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Roboto', sans-serif;
   @apply text-slate-900 dark:text-white ease-in-out duration-500 min-h-screen;
 }
 
 @layer utilities {
+  .important-information {
+    @apply text-purple-600 dark:text-blue-400 italic font-bold;
+  }
+
   .dark-bg-animation {
     animation: 15s infinite bodyBg ease alternate;
     background-image: linear-gradient(
@@ -53,8 +62,12 @@ body {
 }
 
 .app {
-  min-height: calc(100vh - 274px);
+  min-height: calc(100vh - 283px);
   @apply flex items-center;
+}
+
+.techs > a {
+  @apply bg-none dark:bg-slate-500/20 rounded-full p-4 my-3 flex items-center justify-center shadow;
 }
 
 .classic-btn {
@@ -74,7 +87,7 @@ body {
 }
 
 .slider {
-  height: 192px;
+  height: var(--sliderItemHeight);
   position: relative;
   width: 100%;
 
@@ -84,7 +97,7 @@ body {
 }
 
 .slide-track2 {
-  width: calc(192px * 24);
+  width: calc(var(--sliderItemHeight) * 30);
   display: flex;
   animation: scroll2 25s linear infinite;
   justify-content: space-between;
@@ -105,28 +118,6 @@ body {
     transform: translateX(0px);
   }
   100% {
-    transform: translateX(calc(-192px * 8));
+    transform: translateX(calc(-240px * 10));
   }
 }
-
-/* 
-@media screen and (max-width: 768px) {
-  .slide-track2 {
-    width: calc(80px * 15);
-  }
-
-  .slide {
-    width: 80px;
-  }
-
-  @keyframes scroll2 {
-    0% {
-      transform: translateX(0px);
-    }
-    100% {
-      transform: translateX(calc(-244px * 24));
-    }
-  }
-}
-
-*/

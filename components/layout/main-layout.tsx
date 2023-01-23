@@ -24,7 +24,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
         <meta property="og:title" content="xarielah.dev: Passionate Israeli Web-Developer" />
         <meta
           property="og:description"
-          content="Web-Development moves fast and it is facinating and exciting! come share with me that passion."
+          content="Web-Development moves fast and it is fascinating and exciting! come share with me that passion."
         />
         <meta property="og:url" content="PERMALINK" />
         <meta property="og:site_name" content="xarielah.dev" />

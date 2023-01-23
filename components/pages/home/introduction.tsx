@@ -10,8 +10,8 @@ const Introduction = () => {
         <h1 className="text-8xl sm:text-7x font-bold text-center">
           Its all about the <span className="text-purple-600 dark:text-blue-400">code</span>!
         </h1>
-        <p className="text-4xl font-light px-2 lg:px-52 lg:text-center md:px-8">
-          Web Development for me is a playground of oppurtinities to always have the ability to
+        <p className="text-4xl font-medium px-2 lg:px-52 lg:text-center md:px-8">
+          Web Development for me is a playground of opportunities to always have the ability to
           build a Great, Efficient and a Useful product.
         </p>
       </LoadFromBottom>
