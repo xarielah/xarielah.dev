@@ -29,26 +29,45 @@ const Navigation = () => {
     }
   };
 
+  const cvButtonDefault = (
+    <>
+      Get my <span className="font-bold">CV</span>
+    </>
+  );
   return (
-    <nav className="w-full flex items-center justify-between p-8">
-      <Link href="/">
-        <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-          <div className="flex items-center">
-            <div className="ring-2 bg-white ring-gray-100 rounded-full p-2 mr-4">
-              <img src="/images/memoji.png" className="w-10 h-10 lg:w-14 lg:h-14" />
+    <>
+      <nav className="w-full flex items-center justify-between p-8">
+        <Link href="/">
+          <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+            <div className="flex items-center">
+              <div className="ring-2 bg-white ring-gray-100 rounded-full p-2 mr-4">
+                <img src="/images/memoji.png" className="w-10 h-10 lg:w-14 lg:h-14" />
+              </div>
+              <div className="font-bold text-2xl lg:text-3xl">xarielah</div>
             </div>
-            <div className="font-bold text-2xl lg:text-3xl">xarielah</div>
+          </motion.button>
+        </Link>
+        <div className="flex items-center space-x-4">
+          {/* Get my CV button start */}
+          <Link href="/cv">
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className="bg-purple-900 dark:bg-slate-800 z-[2000] shadow-md text-white hidden sm:block font-light px-4 rounded-lg py-[.15em] uppercase border-[1px] border-slate-800/10"
+            >
+              {cvButtonDefault}
+            </motion.button>
+          </Link>
+          {/* Get my CV button end */}
+
+          <ThemeSwitchButton />
+          <div className="z-[51]" onClick={onToggle}>
+            <Hamburger toggled={isOpen} />
           </div>
-        </motion.button>
-      </Link>
-      <div className="flex items-center space-x-4">
-        <ThemeSwitchButton />
-        <div className="z-[51]" onClick={onToggle}>
-          <Hamburger toggled={isOpen} />
         </div>
-      </div>
-      {show ? <Menu toggleAnimation={isOpen} isOnDom={show} onToggle={onToggle} /> : ''}
-    </nav>
+        {show ? <Menu toggleAnimation={isOpen} isOnDom={show} onToggle={onToggle} /> : ''}
+      </nav>
+    </>
   );
 };
 

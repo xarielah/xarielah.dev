@@ -4,7 +4,7 @@ import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import FormFieldError from './form-field-error';
 import LoadFromBottom from '../../animation/load-from-bottom';
-import { sendContactRequest } from '../../../lib/service/contact.service';
+import { sendContactRequest } from '../../../lib/service/fetch.service';
 import { useState } from 'react';
 import SuccessInquiry from './success-inquiry';
 import FormRequestError from './form-request-error';
@@ -66,9 +66,11 @@ const ContactForm = ({ swapLoading, loading }: ContactFormProps) => {
       setErrorSending('');
       setSuccess(true);
     } catch (error) {
-      setErrorSending('Some error has occured while sending the request...');
+      setErrorSending('Some error has occurred while sending the request...');
     }
   };
+
+  //! Todo: refactor this loading and error management to the page it self
 
   return (
     <AnimatePresence mode="wait">

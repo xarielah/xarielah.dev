@@ -51,6 +51,11 @@ const Menu = ({ toggleAnimation, onToggle, isOnDom }: MenuProps) => {
           </motion.div>
         </LoadFromBottom>
       ))}
+      <LoadFromBottom delay={routes.length / 10}>
+        <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }} onClick={onToggle}>
+          <Link href={'/cv'}>CV</Link>
+        </motion.div>
+      </LoadFromBottom>
     </motion.aside>
   );
 };
