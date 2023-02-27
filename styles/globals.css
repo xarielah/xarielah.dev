@@ -62,7 +62,7 @@ body {
 }
 
 .app {
-  min-height: calc(100vh - 283px);
+  min-height: calc(100vh - 267px);
   @apply flex items-center;
 }
 
